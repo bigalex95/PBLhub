@@ -158,7 +158,12 @@ cpp/
 
 ### Online Courses
 
-- [Coursera C++ Specialization](https://www.coursera.org/specializations/c-plus-plus)
+- [Coding for Everyone Specialization](https://www.coursera.org/specializations/coding-for-everyone)
+  - 🎯 **For absolute beginners with no programming experience**
+  - Covers C and C++ fundamentals from scratch
+- [Hands-on C++ Specialization](https://www.coursera.org/specializations/hands-on-cpp)
+  - 🎯 **For building strong, practical C++ skills**
+  - Focus on real-world applications and modern C++ practices
 - [Udemy Modern C++ Courses](https://www.udemy.com/topic/c-plus-plus/)
 
 ---

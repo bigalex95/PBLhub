@@ -1,0 +1,111 @@
+# Build directories
+build/
+Build/
+BUILD/
+out/
+cmake-build-*/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Compiled binaries
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+
+# Debug information
+*.pdb
+*.ilk
+*.dSYM/
+
+# IDE and Editor files
+## Visual Studio Code
+.vscode/
+*.code-workspace
+
+## Visual Studio
+.vs/
+*.vcxproj*
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## CLion / IntelliJ
+.idea/
+cmake-build-*/
+
+## Qt Creator
+CMakeLists.txt.user*
+*.pro.user*
+*.qbs.user
+
+## Xcode
+*.xcodeproj/
+*.xcworkspace/
+
+## Code::Blocks
+*.cbp
+*.layout
+*.depend
+
+# Temporary files
+*~
+*.swp
+*.swo
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Package manager files
+## Conan
+conandata.yml
+conanfile.py
+conanbuildinfo.cmake
+conaninfo.txt
+
+## vcpkg
+vcpkg_installed/
+
+# Testing and Coverage
+Testing/
+coverage.info
+*.gcov
+*.gcno
+*.gcda
+
+# Documentation generated
+docs/html/
+docs/latex/
+*.doxygen
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archive files (in case someone accidentally adds them)
+*.zip
+*.tar.gz
+*.rar
+*.7z

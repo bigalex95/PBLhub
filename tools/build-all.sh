@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # Build All C++ Projects Script
-# This script builds all projects in the projects/ directory
-
-set -e  # Exit on any error
+# This script builds all projects individually and continues on errors
 
 echo "🔧 Building all C++ projects..."
 echo "================================"
@@ -14,57 +12,96 @@ if [ ! -d "projects" ]; then
     exit 1
 fi
 
-# Counter for tracking builds
-total_projects=0
-successful_builds=0
-failed_builds=0
+# Create build directory
+mkdir -p build
+cd build
 
-# Build each project
-for project_dir in projects/*/; do
-    if [ -d "$project_dir" ]; then
-        project_name=$(basename "$project_dir")
-        echo ""
-        echo "🚀 Building project: $project_name"
-        echo "-----------------------------------"
-        
-        total_projects=$((total_projects + 1))
-        
-        # Check if CMakeLists.txt exists
-        if [ -f "$project_dir/CMakeLists.txt" ]; then
-            cd "$project_dir"
-            
-            # Create build directory if it doesn't exist
-            mkdir -p build
-            cd build
-            
-            # Build the project
-            if cmake .. && make; then
-                echo "✅ Successfully built $project_name"
-                successful_builds=$((successful_builds + 1))
-            else
-                echo "❌ Failed to build $project_name"
-                failed_builds=$((failed_builds + 1))
-            fi
-            
-            # Return to cpp branch root
-            cd ../../..
-        else
-            echo "⚠️  No CMakeLists.txt found in $project_name, skipping..."
-        fi
+# Configure CMake
+echo "📦 Configuring CMake..."
+if ! cmake ..; then
+    echo "❌ CMake configuration failed!"
+    exit 1
+fi
+
+# Arrays to track build results
+declare -a successful_projects=()
+declare -a failed_projects=()
+
+# List of all projects
+projects=(
+    "01-hello-cmake:hello-cmake"
+    "02-calculator-cli:calculator-cli" 
+    "03-file-manager:file-manager"
+    "04-todo-app:todo-app"
+    "05-memory-game:memory-game"
+    "06-text-editor:text-editor"
+    "07-http-client:http-client"
+    "08-thread-pool:thread-pool"
+    "09-mini-database:mini-database"
+    "10-game-engine:game-engine"
+)
+
+echo "🔨 Building projects individually..."
+echo ""
+
+# Build each project separately
+for project in "${projects[@]}"; do
+    IFS=':' read -r project_dir target_name <<< "$project"
+    
+    echo "🚀 Building $project_dir..."
+    
+    if cmake --build . --target "$target_name" 2>&1; then
+        echo "✅ $project_dir built successfully"
+        successful_projects+=("$project_dir")
+    else
+        echo "❌ $project_dir failed to build"
+        failed_projects+=("$project_dir")
     fi
+    echo ""
 done
 
-echo ""
+# Return to root directory
+cd ..
+
 echo "📊 Build Summary"
 echo "================"
-echo "Total projects: $total_projects"
-echo "Successful builds: $successful_builds"
-echo "Failed builds: $failed_builds"
+echo "Total projects: ${#projects[@]}"
+echo "✅ Successful builds: ${#successful_projects[@]}"
+echo "❌ Failed builds: ${#failed_projects[@]}"
+echo ""
 
-if [ $failed_builds -eq 0 ]; then
+if [ ${#successful_projects[@]} -gt 0 ]; then
+    echo "🎉 Successfully built projects:"
+    for project in "${successful_projects[@]}"; do
+        echo "  ✅ $project"
+    done
+    echo ""
+fi
+
+if [ ${#failed_projects[@]} -gt 0 ]; then
+    echo "⚠️  Failed to build projects:"
+    for project in "${failed_projects[@]}"; do
+        echo "  ❌ $project"
+    done
+    echo ""
+    echo "🛠️  Fix the errors in failed projects and run ./tools/build-all.sh again"
+    echo ""
+    echo "💡 Common C++ compilation issues:"
+    echo "  - Missing semicolons (;)"
+    echo "  - Undeclared variables or functions" 
+    echo "  - Missing #include statements"
+    echo "  - Syntax errors"
+fi
+
+if [ ${#failed_projects[@]} -eq 0 ]; then
     echo "🎉 All projects built successfully!"
+    echo "📁 Executables location: build/projects/*/[project-name]"
+    echo ""
+    echo "💡 Usage examples:"
+    echo "  ./build/projects/01-hello-cmake/hello-cmake"
+    echo "  ./build/projects/02-calculator-cli/calculator-cli"
+    echo "  ./tools/run-tests.sh  # Run all tests"
     exit 0
 else
-    echo "⚠️  Some projects failed to build. Check the output above for details."
     exit 1
 fi
