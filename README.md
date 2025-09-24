@@ -7,12 +7,12 @@ Each branch is dedicated to learning one technology through **projects**, not ju
 
 ## 📂 Branches Overview  
 
-### 🔹 [C++ Branch](https://github.com/<your-repo>/tree/cpp)  
+### 🔹 [C++ Branch](https://github.com/bigalex95/PBLhub/tree/cpp)  
 - Learn modern C++ through progressively harder projects.  
 - Covers basics, memory management, OOP, and real-world apps.  
 - See details in [`cpp/README.md`](https://github.com/bigalex95/PBLhub/blob/cpp/README.md).  
 
-### 🔹 [Python Branch](https://github.com/<your-repo>/tree/python)  
+### 🔹 [Python Branch](https://github.com/bigalex95/PBLhub/tree/python)  
 - Python for scripting, automation, and quick prototypes.  
 - Projects focused on data processing, APIs, and tools.  
 - See [`python/README.md`](https://github.com/bigalex95/PBLhub/blob/python/README.md).  
@@ -23,7 +23,7 @@ Each branch is dedicated to learning one technology through **projects**, not ju
 
 1. Clone the repo:  
    ```bash
-   git clone https://github.com/<your-repo>.git
+   git clone https://github.com/bigalex95/PBLhub.git
    ```
 2. Checkout a specific branch:
    ```bash
