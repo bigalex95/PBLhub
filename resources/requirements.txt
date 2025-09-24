@@ -1,0 +1,28 @@
+# Common Python dependencies for PBL projects
+# Install with: pip install -r requirements.txt
+
+# Code Quality & Testing
+black>=23.0.0
+flake8>=6.0.0
+pytest>=7.0.0
+mypy>=1.0.0
+
+# Web & API Development
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+
+# Data Processing
+pandas>=1.5.0
+numpy>=1.24.0
+
+# File Processing
+openpyxl>=3.0.0  # Excel files
+python-dotenv>=1.0.0  # Environment variables
+
+# CLI Development
+click>=8.0.0
+rich>=13.0.0  # Rich text and beautiful formatting
+
+# Automation & System
+schedule>=1.2.0
+psutil>=5.9.0  # System and process utilities
