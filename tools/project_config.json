@@ -1,0 +1,87 @@
+{
+  "version": "1.0",
+  "workspace_root": "/home/bigalex95/Projects/Pet_Projects/PBLhub",
+  "projects": [
+    {
+      "name": "01-file-organizer",
+      "path": "projects/01-file-organizer",
+      "full_path": "/home/bigalex95/Projects/Pet_Projects/PBLhub/projects/01-file-organizer",
+      "has_main": true,
+      "has_requirements": true,
+      "has_venv": false,
+      "has_pyproject": true,
+      "description": "File Organizer - Project 01 Learning: File I/O, os module, pathlib"
+    },
+    {
+      "name": "02-password-generator",
+      "path": "projects/02-password-generator",
+      "full_path": "/home/bigalex95/Projects/Pet_Projects/PBLhub/projects/02-password-generator",
+      "has_main": true,
+      "has_requirements": true,
+      "has_venv": false,
+      "has_pyproject": true,
+      "description": "Password Generator - Project 02 Learning: Random, string manipulation, CLI"
+    },
+    {
+      "name": "03-expense-tracker",
+      "path": "projects/03-expense-tracker",
+      "full_path": "/home/bigalex95/Projects/Pet_Projects/PBLhub/projects/03-expense-tracker",
+      "has_main": true,
+      "has_requirements": true,
+      "has_venv": false,
+      "has_pyproject": true,
+      "description": "Expense Tracker - Project 03 Learning: CSV handling, datetime, data structures"
+    },
+    {
+      "name": "04-web-scraper",
+      "path": "projects/04-web-scraper",
+      "full_path": "/home/bigalex95/Projects/Pet_Projects/PBLhub/projects/04-web-scraper",
+      "has_main": true,
+      "has_requirements": true,
+      "has_venv": false,
+      "has_pyproject": true,
+      "description": "Web Scraper - Project 04 Learning: Requests, BeautifulSoup, HTML parsing"
+    },
+    {
+      "name": "05-api-client",
+      "path": "projects/05-api-client",
+      "full_path": "/home/bigalex95/Projects/Pet_Projects/PBLhub/projects/05-api-client",
+      "has_main": true,
+      "has_requirements": true,
+      "has_venv": false,
+      "has_pyproject": true,
+      "description": "API Client - Project 05 Learning: REST APIs, JSON, error handling"
+    },
+    {
+      "name": "06-task-scheduler",
+      "path": "projects/06-task-scheduler",
+      "full_path": "/home/bigalex95/Projects/Pet_Projects/PBLhub/projects/06-task-scheduler",
+      "has_main": true,
+      "has_requirements": true,
+      "has_venv": false,
+      "has_pyproject": true,
+      "description": "Task Scheduler - Project 06 Learning: Threading, scheduling, system integration"
+    },
+    {
+      "name": "07-data-analyzer",
+      "path": "projects/07-data-analyzer",
+      "full_path": "/home/bigalex95/Projects/Pet_Projects/PBLhub/projects/07-data-analyzer",
+      "has_main": true,
+      "has_requirements": true,
+      "has_venv": false,
+      "has_pyproject": true,
+      "description": "Data Analyzer - Project 07 Learning: Pandas, NumPy, data visualization"
+    },
+    {
+      "name": "08-mini-framework",
+      "path": "projects/08-mini-framework",
+      "full_path": "/home/bigalex95/Projects/Pet_Projects/PBLhub/projects/08-mini-framework",
+      "has_main": true,
+      "has_requirements": true,
+      "has_venv": false,
+      "has_pyproject": true,
+      "description": "Mini Framework - Project 08 Learning: OOP, decorators, metaclasses"
+    }
+  ],
+  "last_updated": "1758749114.6545725"
+}

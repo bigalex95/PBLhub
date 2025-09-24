@@ -1,0 +1,23 @@
+# UV Workspace Configuration
+[workspace]
+members = [
+    "projects/01-file-organizer",
+    "projects/02-password-generator",
+    "projects/03-expense-tracker",
+    "projects/04-web-scraper",
+    "projects/05-api-client",
+    "projects/06-task-scheduler",
+    "projects/07-data-analyzer",
+    "projects/08-mini-framework",
+]
+
+[workspace.dependencies]
+# Shared development dependencies
+pytest = ">=7.0"
+black = ">=23.0"
+flake8 = ">=5.0"
+mypy = ">=1.0"
+
+[tool.uv]
+# Global UV settings
+python-preference = "managed"

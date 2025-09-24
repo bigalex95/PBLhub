@@ -89,6 +89,19 @@ temp/
 Pipfile.lock
 poetry.lock
 
+# UV package manager files
+uv.lock
+.python-version
+__pypackages__/
+.uv-cache/
+.uvenv/
+# UV project files are auto-generated, ignoring them
+# to keep compatibility with requirements.txt approach
+projects/*/pyproject.toml
+projects/*/.python-version
+# Note: keeping requirements.txt tracked for compatibility
+# Note: uv.toml workspace config at root is tracked for team setup
+
 # OS generated files
 .DS_Store
 .DS_Store?

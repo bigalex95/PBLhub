@@ -28,21 +28,102 @@ Welcome to my Python learning branch! This is where I develop practical Python s
 
 ---
 
-## � Progress Tracker
+<!-- PROJECT_LIST_START -->
 
-| Project               | Status     | Concepts Learned                          | Difficulty      |
-| --------------------- | ---------- | ----------------------------------------- | --------------- |
-| 01-file-organizer     | ⏳ Planned | File I/O, os module, pathlib              | � Beginner      |
-| 02-password-generator | ⏳ Planned | Random, string manipulation, CLI          | 🟢 Beginner     |
-| 03-expense-tracker    | ⏳ Planned | CSV handling, datetime, data structures   | 🟡 Intermediate |
-| 04-web-scraper        | ⏳ Planned | Requests, BeautifulSoup, HTML parsing     | 🟡 Intermediate |
-| 05-api-client         | ⏳ Planned | REST APIs, JSON, error handling           | 🟡 Intermediate |
-| 06-task-scheduler     | ⏳ Planned | Threading, scheduling, system integration | 🔴 Advanced     |
-| 07-data-analyzer      | ⏳ Planned | Pandas, NumPy, data visualization         | 🔴 Advanced     |
-| 08-mini-framework     | ⏳ Planned | OOP, decorators, metaclasses              | 🔴 Advanced     |
+## 📁 Projects
+
+### 01. 01 File Organizer
+
+![Python](https://img.shields.io/badge/Python-✓-green) ![Deps](https://img.shields.io/badge/Dependencies-✓-blue) ![UV](https://img.shields.io/badge/UV-✓-purple)
+**Path:** `projects/01-file-organizer/`
+**Description:** File Organizer - Project 01 Learning: File I/O, os module, pathlib
+
+```bash
+# Run the project
+python projects/01-file-organizer/main.py
+```
+
+### 02. 02 Password Generator
+
+![Python](https://img.shields.io/badge/Python-✓-green) ![Deps](https://img.shields.io/badge/Dependencies-✓-blue) ![UV](https://img.shields.io/badge/UV-✓-purple)
+**Path:** `projects/02-password-generator/`
+**Description:** Password Generator - Project 02 Learning: Random, string manipulation, CLI
+
+```bash
+# Run the project
+python projects/02-password-generator/main.py
+```
+
+### 03. 03 Expense Tracker
+
+![Python](https://img.shields.io/badge/Python-✓-green) ![Deps](https://img.shields.io/badge/Dependencies-✓-blue) ![UV](https://img.shields.io/badge/UV-✓-purple)
+**Path:** `projects/03-expense-tracker/`
+**Description:** Expense Tracker - Project 03 Learning: CSV handling, datetime, data structures
+
+```bash
+# Run the project
+python projects/03-expense-tracker/main.py
+```
+
+### 04. 04 Web Scraper
+
+![Python](https://img.shields.io/badge/Python-✓-green) ![Deps](https://img.shields.io/badge/Dependencies-✓-blue) ![UV](https://img.shields.io/badge/UV-✓-purple)
+**Path:** `projects/04-web-scraper/`
+**Description:** Web Scraper - Project 04 Learning: Requests, BeautifulSoup, HTML parsing
+
+```bash
+# Run the project
+python projects/04-web-scraper/main.py
+```
+
+### 05. 05 Api Client
+
+![Python](https://img.shields.io/badge/Python-✓-green) ![Deps](https://img.shields.io/badge/Dependencies-✓-blue) ![UV](https://img.shields.io/badge/UV-✓-purple)
+**Path:** `projects/05-api-client/`
+**Description:** API Client - Project 05 Learning: REST APIs, JSON, error handling
+
+```bash
+# Run the project
+python projects/05-api-client/main.py
+```
+
+### 06. 06 Task Scheduler
+
+![Python](https://img.shields.io/badge/Python-✓-green) ![Deps](https://img.shields.io/badge/Dependencies-✓-blue) ![UV](https://img.shields.io/badge/UV-✓-purple)
+**Path:** `projects/06-task-scheduler/`
+**Description:** Task Scheduler - Project 06 Learning: Threading, scheduling, system integration
+
+```bash
+# Run the project
+python projects/06-task-scheduler/main.py
+```
+
+### 07. 07 Data Analyzer
+
+![Python](https://img.shields.io/badge/Python-✓-green) ![Deps](https://img.shields.io/badge/Dependencies-✓-blue) ![UV](https://img.shields.io/badge/UV-✓-purple)
+**Path:** `projects/07-data-analyzer/`
+**Description:** Data Analyzer - Project 07 Learning: Pandas, NumPy, data visualization
+
+```bash
+# Run the project
+python projects/07-data-analyzer/main.py
+```
+
+### 08. 08 Mini Framework
+
+![Python](https://img.shields.io/badge/Python-✓-green) ![Deps](https://img.shields.io/badge/Dependencies-✓-blue) ![UV](https://img.shields.io/badge/UV-✓-purple)
+**Path:** `projects/08-mini-framework/`
+**Description:** Mini Framework - Project 08 Learning: OOP, decorators, metaclasses
+
+```bash
+# Run the project
+python projects/08-mini-framework/main.py
+```
+
+<!-- PROJECT_LIST_END -->
 
 **Progress**: 0/8 projects completed
-**Current Focus**: Setting up Python development environment
+**Current Focus**: Setting up Python development environment with virtual environments
 **Next Milestone**: Complete first 3 beginner projects
 
 ---
