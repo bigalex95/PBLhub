@@ -1,0 +1,40 @@
+# Common OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Common IDE and Editor files
+.vscode/
+*.code-workspace
+.idea/
+
+# Common temporary files
+*~
+*.swp
+*.swo
+*.tmp
+*.temp
+
+# Log files
+*.log
+logs/
+
+# Environment variables (sensitive data)
+.env
+.env.local
+.env.*.local
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Common build outputs (generic)
+build/
+dist/
+out/
