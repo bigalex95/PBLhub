@@ -1,0 +1,1 @@
+# Password generation - no external dependencies needed

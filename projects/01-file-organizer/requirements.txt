@@ -1,0 +1,1 @@
+# Basic file operations - no external dependencies needed
