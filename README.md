@@ -79,6 +79,17 @@ This repository is my personal **Project-Based Learning (PBL) hub** where I mast
 
 ---
 
+## 📚 Documentation
+
+This repository includes comprehensive documentation to guide development and contribution:
+
+- **[Branch Workflow Guide](./docs/BRANCH_WORKFLOW.md)** - Complete workflow for managing branches and adding projects
+- **[Branch Standards](./docs/BRANCH_STANDARDS.md)** - Standards for branch organization and structure
+- **[Project Template](./docs/PROJECT_TEMPLATE.md)** - Template for creating new project documentation
+- **[Contributing Guidelines](./CONTRIBUTING.md)** - Guidelines for contributors
+
+---
+
 ## 📋 Project Standards
 
 Every project in this repository follows these standards:
