@@ -50,7 +50,14 @@ for project in "${projects[@]}"; do
     
     echo "🚀 Building $project_dir..."
     
-    if cmake --build . --target "$target_name" 2>&1; then
+    # Check if we're using a multi-config generator (like Visual Studio on Windows)
+    if grep -q "Visual Studio\|Xcode\|Multi-Config" CMakeCache.txt 2>/dev/null; then
+        build_result=$(cmake --build . --target "$target_name" --config Debug 2>&1)
+    else
+        build_result=$(cmake --build . --target "$target_name" 2>&1)
+    fi
+    
+    if [ $? -eq 0 ]; then
         echo "✅ $project_dir built successfully"
         successful_projects+=("$project_dir")
     else

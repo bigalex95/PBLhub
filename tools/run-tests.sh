@@ -17,7 +17,15 @@ fi
 cd build
 
 echo "🏃 Running all tests..."
-ctest --output-on-failure --verbose
+
+# Check if we're using a multi-config generator (like Visual Studio on Windows)
+if grep -q "Visual Studio\|Xcode\|Multi-Config" CMakeCache.txt 2>/dev/null; then
+    echo "📋 Detected multi-config generator, using Debug configuration..."
+    ctest --output-on-failure --verbose -C Debug
+else
+    echo "📋 Detected single-config generator..."
+    ctest --output-on-failure --verbose
+fi
 
 echo ""
 echo "✅ All tests completed!"
