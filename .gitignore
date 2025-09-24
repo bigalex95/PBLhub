@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
+*.pyd
 
 # Distribution / packaging
 .Python
@@ -18,10 +19,20 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Virtual environments
 venv/
@@ -30,6 +41,8 @@ ENV/
 env.bak/
 venv.bak/
 .venv/
+.env/
+pyvenv.cfg
 
 # IDE and Editor files
 ## Visual Studio Code
@@ -43,26 +56,48 @@ venv.bak/
 
 ## Jupyter Notebook
 .ipynb_checkpoints
+*.ipynb
 
 ## Spyder
 .spyderproject
 .spyproject
 
-# Testing
+## Rope
+.ropeproject
+
+## mkdocs
+/site
+
+# Testing and Coverage
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
 .tox/
 .cache
+.nox/
 nosetests.xml
 coverage.xml
 *.cover
+*.py,cover
 .hypothesis/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
 
 # Environment variables
 .env
 .env.local
 .env.*.local
+.envrc
 
 # Logs
 *.log
@@ -71,36 +106,80 @@ logs/
 # Database files
 *.db
 *.sqlite3
+*.db-journal
 
 # Temporary files
 *.tmp
 *.temp
 *~
-.DS_Store
-Thumbs.db
 
 # Project specific
 data/
 output/
 downloads/
 temp/
+scratch/
 
 # Package manager files
+## Pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+## Pipenv
 Pipfile.lock
+
+## Poetry
 poetry.lock
 
-# UV package manager files
+## UV package manager files
 uv.lock
 .python-version
 __pypackages__/
 .uv-cache/
 .uvenv/
-# UV project files are auto-generated, ignoring them
-# to keep compatibility with requirements.txt approach
-projects/*/pyproject.toml
-projects/*/.python-version
-# Note: keeping requirements.txt tracked for compatibility
-# Note: uv.toml workspace config at root is tracked for team setup
+
+# Conda
+.conda/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
 
 # OS generated files
 .DS_Store
