@@ -1,9 +1,11 @@
-# Build directories
+# C++ Build directories
 build/
 Build/
 BUILD/
 out/
 cmake-build-*/
+bin/
+obj/
 
 # CMake generated files
 CMakeCache.txt
@@ -12,8 +14,9 @@ cmake_install.cmake
 Makefile
 *.cmake
 !CMakeLists.txt
+install_manifest.txt
 
-# Compiled binaries
+# Compiled binaries and object files
 *.exe
 *.out
 *.app
@@ -24,11 +27,16 @@ Makefile
 *.dll
 *.a
 *.lib
+*.exp
+*.pdb
+*.ilk
+*.map
 
 # Debug information
 *.pdb
 *.ilk
 *.dSYM/
+*.map
 
 # IDE and Editor files
 ## Visual Studio Code
@@ -43,6 +51,8 @@ Makefile
 *.user
 *.userosscache
 *.sln.docstates
+*.vcproj
+*.vsprops
 
 ## CLion / IntelliJ
 .idea/
@@ -52,23 +62,25 @@ cmake-build-*/
 CMakeLists.txt.user*
 *.pro.user*
 *.qbs.user
+*.pro
+*.pri
 
 ## Xcode
 *.xcodeproj/
 *.xcworkspace/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
 
 ## Code::Blocks
 *.cbp
 *.layout
 *.depend
 
-# Temporary files
-*~
-*.swp
-*.swo
-*.tmp
-.DS_Store
-Thumbs.db
+## Dev-C++
+*.dev
+*.layout
 
 # Package manager files
 ## Conan
@@ -76,9 +88,14 @@ conandata.yml
 conanfile.py
 conanbuildinfo.cmake
 conaninfo.txt
+graph_info.json
 
 ## vcpkg
 vcpkg_installed/
+.vcpkg-root
+
+## Hunter
+_builds/
 
 # Testing and Coverage
 Testing/
@@ -86,11 +103,32 @@ coverage.info
 *.gcov
 *.gcno
 *.gcda
+lcov.info
+coverage/
+
+# Static analysis
+cppcheck-result.xml
+*.sarif
 
 # Documentation generated
 docs/html/
 docs/latex/
 *.doxygen
+Doxyfile*
+
+# Profiling data
+*.prof
+gmon.out
+callgrind.out*
+massif.out*
+cachegrind.out*
+
+# Temporary files
+*~
+*.swp
+*.swo
+*.tmp
+*.temp
 
 # Log files
 *.log
@@ -104,7 +142,12 @@ docs/latex/
 ehthumbs.db
 Thumbs.db
 
-# Archive files (in case someone accidentally adds them)
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Archive files
 *.zip
 *.tar.gz
 *.rar
