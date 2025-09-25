@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Build All C++ Projects Script
-# This script builds all projects individually and continues on errors
+# This script dynamically discovers and builds all projects individually
 
 echo "🔧 Building all C++ projects..."
 echo "================================"
@@ -11,6 +11,22 @@ if [ ! -d "projects" ]; then
     echo "❌ Error: projects/ directory not found. Make sure you're in the cpp branch root."
     exit 1
 fi
+
+# Function to discover all projects dynamically
+discover_projects() {
+    # Find all directories in projects/ that contain CMakeLists.txt
+    for project_path in ../projects/*/; do
+        if [ -d "$project_path" ] && [ -f "${project_path}CMakeLists.txt" ]; then
+            project_dir=$(basename "$project_path")
+            
+            # Extract target name from project directory name
+            # Remove the number prefix (e.g., "01-hello-cmake" -> "hello-cmake")
+            target_name=$(echo "$project_dir" | sed 's/^[0-9][0-9]*-//')
+            
+            echo "$project_dir:$target_name"
+        fi
+    done
+}
 
 # Create build directory
 mkdir -p build
@@ -27,19 +43,21 @@ fi
 declare -a successful_projects=()
 declare -a failed_projects=()
 
-# List of all projects
-projects=(
-    "01-hello-cmake:hello-cmake"
-    "02-calculator-cli:calculator-cli" 
-    "03-file-manager:file-manager"
-    "04-todo-app:todo-app"
-    "05-memory-game:memory-game"
-    "06-text-editor:text-editor"
-    "07-http-client:http-client"
-    "08-thread-pool:thread-pool"
-    "09-mini-database:mini-database"
-    "10-game-engine:game-engine"
-)
+# Dynamically discover all projects
+echo "🔍 Discovering projects..."
+readarray -t projects < <(discover_projects)
+
+if [ ${#projects[@]} -eq 0 ]; then
+    echo "❌ No projects found in projects/ directory!"
+    exit 1
+fi
+
+echo "📋 Found ${#projects[@]} projects:"
+for project in "${projects[@]}"; do
+    IFS=':' read -r project_dir target_name <<< "$project"
+    echo "  - $project_dir → $target_name"
+done
+echo ""
 
 echo "🔨 Building projects individually..."
 echo ""
@@ -105,8 +123,25 @@ if [ ${#failed_projects[@]} -eq 0 ]; then
     echo "📁 Executables location: build/projects/*/[project-name]"
     echo ""
     echo "💡 Usage examples:"
-    echo "  ./build/projects/01-hello-cmake/hello-cmake"
-    echo "  ./build/projects/02-calculator-cli/calculator-cli"
+    
+    # Show examples for first few successful projects
+    count=0
+    for project in "${successful_projects[@]}"; do
+        if [ $count -lt 3 ]; then
+            # Find the original project directory name for this target
+            for proj_entry in "${projects[@]}"; do
+                IFS=':' read -r proj_dir target_name <<< "$proj_entry"
+                if [ "$project" = "$proj_dir" ]; then
+                    echo "  ./build/projects/$proj_dir/$target_name"
+                    break
+                fi
+            done
+            ((count++))
+        else
+            break
+        fi
+    done
+    
     echo "  ./tools/run-tests.sh  # Run all tests"
     exit 0
 else

@@ -41,10 +41,23 @@ Welcome to my C++ learning branch! This is where I build my understanding of mod
 | 08-thread-pool    | ⏳ Planned | Concurrency, threading, synchronization | 🔴 Advanced     |
 | 09-mini-database  | ⏳ Planned | File formats, indexing, performance     | 🔴 Advanced     |
 | 10-game-engine    | ⏳ Planned | Graphics, architecture, optimization    | 🔴 Expert       |
+| 11-screen-recorder| ⏳ Planned | System APIs, multimedia, GUI (optional) | 🔴 Advanced     |
 
-**Progress**: 0/10 projects completed
+**Progress**: 0/11 projects completed
 **Current Focus**: Setting up development environment
 **Next Milestone**: Complete first 3 beginner projects
+
+### 🎥 Project Highlight: Screen Recorder
+
+**Project 11** focuses on building a **lightweight screen recording application** that captures desktop activity and saves it to video files. This project will explore:
+
+- **System APIs**: Working with platform-specific screen capture APIs
+- **Multimedia Processing**: Understanding video encoding and file formats
+- **Performance Optimization**: Efficient memory management for real-time capture
+- **Optional GUI**: Simple interface for easy recording control
+- **Cross-platform Design**: Supporting Windows, Linux, and macOS
+
+The goal is to create a **minimal, fast, and user-friendly** screen recorder - perfect for quick demonstrations, tutorials, or capturing important screen activity.
 
 ---
 
@@ -99,7 +112,8 @@ cpp/
 ├── projects/                 # All C++ projects
 │   ├── 01-hello-cmake/      # Basic CMake project
 │   ├── 02-calculator-cli/   # Command-line calculator
-│   └── ...                  # More projects
+│   ├── ...                  # 8 more intermediate/advanced projects
+│   └── 11-screen-recorder/  # Lightweight screen recording app
 ├── resources/               # Learning materials
 │   ├── learning-notes.md    # Personal notes and insights
 │   ├── useful-links.md      # Helpful resources and references
