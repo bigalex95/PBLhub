@@ -152,3 +152,10 @@ Thumbs.db
 *.tar.gz
 *.rar
 *.7z
+
+# Media/output files (screen recordings, etc.)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
